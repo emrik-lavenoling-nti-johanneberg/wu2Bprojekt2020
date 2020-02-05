@@ -9,7 +9,6 @@ body{
         display: grid;
         grid-template-areas: 
         "hd"
-        "na"
         "h2"
         "s1"
         "h3"
@@ -24,10 +23,6 @@ body{
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    .na{
-        grid-area: na;
-        background-color: lightgray;
     }
     .s1{
         grid-area: s1;
@@ -98,7 +93,5 @@ body{
         text-align: center;
         border-bottom: solid 1px black;
     }
-
-
 
 }
