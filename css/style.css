@@ -3,8 +3,8 @@ body{
     background-color: rgb(245, 245, 245)
 }
 
-
-@media screen and (max-width: 767px){
+/* Mobil */
+@media screen and (max-width: 990px){
     .container{
         display: grid;
         grid-template-areas: 
@@ -85,13 +85,105 @@ body{
         width: 100%;
     }
     h1{
-        height: 80%;
+        text-align: center;
+        color: white;
+        font-size: 7vw;
+    }
+    h4{
+        text-align: center;
+        border-bottom: solid 1px black;
+        font-size: 5vw;
+    }
+
+}
+/* Desktop */
+@media screen and (min-width: 990px){
+    .container{
+        display: grid;
+        height: 100vh;
+        grid-template-areas: 
+        "hd hd"
+        "h2 h3"
+        "s1 s2"
+        "ft ft";
+    }
+    .hd{
+        grid-area: hd;
+        background: url(../img/mario.png);
+        background-size: cover;
+        padding-top: 10vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .s1{
+        grid-area: s1;
+        display: grid;
+        grid-gap: 1em;
+        padding: 2em;
+        grid-template-areas:
+        "a1 a2"
+        "a3 a4";
+    }
+    .s2{
+        grid-area: s2;
+        display: grid;
+        grid-gap: 1em;
+        padding: 2em;
+        grid-template-areas:
+        "a5 a6"
+        "a7 a8";
+    }
+    .h2{
+        grid-area: h2;
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+    .h3{
+        grid-area: h3;
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+    .a1{
+        grid-area: a1;
+    }
+    .a2{
+        grid-area: a2;
+    }
+    .a3{
+        grid-area: a3;
+    }
+    .a4{
+        grid-area: a4;
+    }
+    .a5{
+        grid-area: a5;
+    }
+    .a6{
+        grid-area: a6;
+    }
+    .a7{
+        grid-area: a7;
+    }
+    .a8{
+        grid-area: a8;
+    }
+    .ft{
+        grid-area: ft;
+        background: lightgray;
+    }
+    .nes, .n64, .wii, .switch, .gb, .gba, .ds, .ds3{
+        width: 100%;
+    }
+    h1{
+        font-size: 3em;
         text-align: center;
         color: white;
     }
     h4{
         text-align: center;
         border-bottom: solid 1px black;
+        font-size: 2em;
     }
 
 }
