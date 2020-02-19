@@ -9,6 +9,7 @@ body{
         display: grid;
         grid-template-areas: 
         "hd"
+        "tx"
         "h2"
         "s1"
         "h3"
@@ -38,7 +39,8 @@ body{
         grid-area: s2;
         display: grid;
         grid-gap: 1em;
-        padding: 1em;
+        padding-right: 1em;
+        padding-left: 1em;
         grid-template-areas:
         "a5 a6"
         "a7 a8";
@@ -77,6 +79,14 @@ body{
     .a8{
         grid-area: a8;
     }
+    .tx{
+        grid-area: tx;
+        background: white;
+        margin: 1em;
+        padding-right: 1em;
+        padding-left: 1em;
+        font-size: 0.8em;
+    }
     .ft{
         grid-area: ft;
         background: lightgray;
@@ -94,6 +104,9 @@ body{
         border-bottom: solid 1px black;
         font-size: 5vw;
     }
+    .pc{
+        display: none;
+    }
 
 }
 /* Desktop */
@@ -101,8 +114,10 @@ body{
     .container{
         display: grid;
         height: 100vh;
+        grid-auto-columns: 1fr 1fr;
         grid-template-areas: 
         "hd hd"
+        "tx tx"
         "h2 h3"
         "s1 s2"
         "ft ft";
@@ -121,6 +136,7 @@ body{
         display: grid;
         grid-gap: 1em;
         padding: 2em;
+        justify-items: stretch;
         grid-template-areas:
         "a1 a2"
         "a3 a4";
@@ -168,11 +184,35 @@ body{
     .a8{
         grid-area: a8;
     }
+    .tx{
+        grid-area: tx;
+        background: white;
+        margin: 1em;
+        padding-right: 1em;
+        padding-left: 1em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "pg pc";
+    }
+    .pc{
+        grid-area: pc;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        width: 100%;
+    }
+    .pg{
+        grid-area: pg;
+        font-size: 2vw;
+    }
     .ft{
         grid-area: ft;
         background: lightgray;
     }
-    .nes, .n64, .wii, .switch, .gb, .gba, .ds, .ds3{
+    .nes, .n64, .wii, .switch{
+        width: 100%;
+    }
+    .gb, .gba, .ds, .ds3{
         width: 100%;
     }
     h1{
