@@ -2,6 +2,9 @@ body{
     margin: 0px;
     background-color: rgb(245, 245, 245)
 }
+html {
+    scroll-behavior: smooth;
+}
 
 /* Mobil */
 @media screen and (max-width: 990px){
@@ -18,12 +21,13 @@ body{
     }
     .hd{
         grid-area: hd;
-        background: url(../img/mario.png);
+        background: url(../img/background\ grey.png);
         background-size: cover;
         padding-top: 10vh;
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-decoration: none;
     }
     .s1{
         grid-area: s1;
@@ -107,6 +111,10 @@ body{
     .pc{
         display: none;
     }
+    .h1{
+        margin-bottom: 0px;
+        margin-top: 0.5em;
+    }
 
 }
 /* Desktop */
@@ -124,11 +132,12 @@ body{
     }
     .hd{
         grid-area: hd;
-        background: url(../img/mario.png);
+        background: url(../img/background\ grey.png);
         background-size: cover;
-        padding-top: 10vh;
+        height: 100vh;
+        text-decoration: none;
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
     .s1{
@@ -191,9 +200,14 @@ body{
         padding-right: 1em;
         padding-left: 1em;
         display: grid;
+        grid-gap: 5px;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
+        "h1 pc"
         "pg pc";
+    }
+    .h1{
+        grid-area: h1;
     }
     .pc{
         grid-area: pc;
@@ -219,11 +233,12 @@ body{
         font-size: 3em;
         text-align: center;
         color: white;
+        margin: auto;
     }
     h4{
         text-align: center;
         border-bottom: solid 1px black;
         font-size: 2em;
+        margin-bottom: 0px;
     }
-
 }
