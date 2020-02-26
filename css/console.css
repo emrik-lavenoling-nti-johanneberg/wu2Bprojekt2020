@@ -1,0 +1,64 @@
+body{
+    margin: 0px;
+}
+.hd_c{
+    grid-area: hd_c;
+    display: grid;
+    grid-template-areas:
+    "icon h1";
+    background-color: red;
+}
+.icon{
+    grid-area: icon;
+    background-color: orange;
+}
+.h1{
+    grid-area: h1;
+    background-color: yellow;
+}
+.se_c{
+    grid-area: se_c;
+    display: grid;
+    grid-template-areas: 
+    "a_c"
+    "galar";
+    background-color: yellowgreen;
+}
+.a_c{
+    grid-area: a_c;
+    background-color: green;
+}
+.galar{
+    grid-area: galar;
+    background-color: lightblue;
+}
+.controller{
+    grid-area: cr;
+    background-color: blue;
+}
+.console{
+    grid-area: cs;
+    background-color: blueviolet;
+}
+.tb{
+    grid-area: tb;
+    background-color: indigo;
+}
+.ft{
+    grid-area: ft;
+    background-color: purple;
+}
+
+
+/* Mobil */
+@media screen and (max-width: 990px){
+    .container_console{
+        display: grid;
+        grid-template-areas: 
+        "hd_c hd_c"
+        "se_c se_c"
+        "cr cs"
+        "tb tb"
+        "ft ft";
+    }
+}
