@@ -1,20 +1,24 @@
 body{
     margin: 0px;
+    background-color: rgb(245, 245, 245)
 }
 .hd_c{
     grid-area: hd_c;
     display: grid;
+    grid-template-columns: 4em 1fr;
     grid-template-areas:
-    "icon h1";
-    background-color: red;
+    "menu-button h1";
+    background: url(../img/background\ grey.png)
 }
-.icon{
-    grid-area: icon;
-    background-color: orange;
+.menu-button{
+    grid-area: menu-button;
+    color: white;
+    display: flex;
+    align-items: center;
 }
 .h1{
     grid-area: h1;
-    background-color: yellow;
+    color: white;
 }
 .se_c{
     grid-area: se_c;
@@ -22,43 +26,108 @@ body{
     grid-template-areas: 
     "a_c"
     "galar";
-    background-color: yellowgreen;
 }
 .a_c{
     grid-area: a_c;
-    background-color: green;
+    
 }
 .galar{
     grid-area: galar;
-    background-color: lightblue;
+    padding: 1em;
 }
 .controller{
     grid-area: cr;
-    background-color: blue;
+    background-color: white;
+    margin: 0 0.5em 0 1em;
+    display: flex;
+    align-items: center;
 }
 .console{
     grid-area: cs;
-    background-color: blueviolet;
+    background-color: white;
+    margin: 0 1em 0 0.5em
 }
 .tb{
     grid-area: tb;
-    background-color: indigo;
+    background-color: white;
+    margin: 0 1em 1em 1em;
 }
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;    
+}
+
 .ft{
     grid-area: ft;
-    background-color: purple;
 }
-
-
+img{
+    width: 100%;
+}
+h2, h3{
+    text-align: center;
+    border-bottom: solid black 1px;
+    margin-right: 1em;
+    margin-left: 1em;
+}
+p{
+    margin: 0px 1em 0px 1em;
+    padding: 9px 1em 9px 1em;
+    background-color: white;
+}
+.h2{
+    grid-area: h2;
+    border: none;
+    margin-bottom: 0.5em;
+}
 /* Mobil */
 @media screen and (max-width: 990px){
     .container_console{
         display: grid;
+        grid-area: 5px;
         grid-template-areas: 
         "hd_c hd_c"
         "se_c se_c"
-        "cr cs"
+        "h2 h2"
         "tb tb"
+        "h1 h3"
+        "cr cs"
         "ft ft";
+    }
+    .material-icons{
+        font-size: 3.5em;
+    }
+    .menu{
+        height: 100vh;
+        width: 50vw;
+        background-color: grey;
+        position: fixed;
+        top: 0;
+        left: -90vw;
+        transition: left 0.3s;
+        box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+        z-index: 10;
+    }
+        
+    .show{
+        left: 0;
+    }
+        
+    .fade-layer{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(25, 25, 25, 0.25);
+        display: none;
+        z-index: 5;
+    }
+        
+    .visible{
+        display: block;
     }
 }
