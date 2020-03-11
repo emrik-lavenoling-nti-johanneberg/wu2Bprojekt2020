@@ -5,14 +5,16 @@ body{
 html {
     scroll-behavior: smooth;
 }
-
+a{
+    text-decoration: none;
+    color: white;
+}
 /* Mobil */
 @media screen and (max-width: 990px){
     .container{
         display: grid;
         grid-template-areas: 
         "hd"
-        "tx"
         "h2"
         "s1"
         "h3"
@@ -83,14 +85,6 @@ html {
     .a8{
         grid-area: a8;
     }
-    .tx{
-        grid-area: tx;
-        background: white;
-        margin: 1em;
-        padding-right: 1em;
-        padding-left: 1em;
-        font-size: 0.8em;
-    }
     .ft{
         grid-area: ft;
         background: lightgray;
@@ -125,7 +119,6 @@ html {
         grid-auto-columns: 1fr 1fr;
         grid-template-areas: 
         "hd hd"
-        "tx tx"
         "h2 h3"
         "s1 s2"
         "ft ft";
@@ -192,20 +185,7 @@ html {
     }
     .a8{
         grid-area: a8;
-    }
-    .tx{
-        grid-area: tx;
-        background: white;
-        margin: 1em;
-        padding-right: 1em;
-        padding-left: 1em;
-        display: grid;
-        grid-gap: 5px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-        "h1 pc"
-        "pg pc";
-    }
+    } 
     .h1{
         grid-area: h1;
     }

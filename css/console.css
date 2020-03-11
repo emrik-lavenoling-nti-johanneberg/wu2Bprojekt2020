@@ -3,9 +3,10 @@ body{
     background-color: rgb(245, 245, 245)
 }
 .hd_c{
-    grid-area: hd_c;
     display: grid;
+    width: 100vw;
     grid-template-columns: 4em 1fr;
+    position: fixed;
     grid-template-areas:
     "menu-button h1";
     background: url(../img/background\ grey.png)
@@ -23,6 +24,7 @@ body{
 .se_c{
     grid-area: se_c;
     display: grid;
+    margin-top: 78.875px;
     grid-template-areas: 
     "a_c"
     "galar";
@@ -38,29 +40,27 @@ body{
 .controller{
     grid-area: cr;
     background-color: white;
-    margin: 0 0.5em 0 1em;
+    margin: 0 1em 0 0.5em;
     display: flex;
     align-items: center;
 }
 .console{
     grid-area: cs;
     background-color: white;
-    margin: 0 1em 0 0.5em
+    margin: 0 0.5em 0 1em
 }
 .tb{
     grid-area: tb;
-    background-color: white;
+    background-color: rgb(235, 235, 235);
     margin: 0 1em 1em 1em;
 }
-table, th, td {
-    border: 1px solid black;
+table, td {
+    border: 1px solid lightgray;
     border-collapse: collapse;
 }
-th, td {
-    padding: 5px;
-    text-align: left;    
+td{
+    padding: 1em;    
 }
-
 .ft{
     grid-area: ft;
 }
@@ -81,53 +81,139 @@ p{
 .h2{
     grid-area: h2;
     border: none;
+    margin-top:  calc(78.875px + 1em);
     margin-bottom: 0.5em;
 }
+
+.material-icons{
+    font-size: 3.5em;
+}
+.menu{
+    height: 100vh;
+    background-color: lightgray;
+    position: fixed;
+    top: 0;
+    left: -90vw;
+    transition: left 0.3s;
+    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+    z-index: 10;
+}
+    
+.show{
+    left: 0;
+}
+    
+.fade-layer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(25, 25, 25, 0.25);
+    display: none;
+    z-index: 5;
+}
+    
+.visible{
+    display: block;
+}
+
+.h1_nav{
+    font-size: 100%;
+    text-align: center;
+    grid-area: h1_nav;
+}
+
+.nav_container{
+    text-decoration: none;
+    display: grid;
+    padding: 1em;
+    grid-gap: 1em;
+    grid-template-areas: 
+    "h1_nav"
+    "link_1"
+    "link_2"
+    "link_3"
+    "link_4"
+    "link_5"
+    "link_6"
+    "link_7"
+    "link_8"
+    "link_9";
+
+}
+
+.link_1{
+    grid-area: link_1;
+}
+.link_2{
+    grid-area: link_2;
+}
+.link_3{
+    grid-area: link_3;
+}
+.link_4{
+    grid-area: link_4;
+}
+.link_5{
+    grid-area: link_5;
+}
+.link_6{
+    grid-area: link_6;
+}
+.link_7{
+    grid-area: link_7;
+}
+.link_8{
+    grid-area: link_8;
+}
+.link_9{
+    grid-area: link_9;
+}
+.link_1, .link_2, .link_3, .link_4, .link_5, .link_6, .link_7, .link_8, .link_9{
+    background-color: rgb(235, 235, 235);
+    padding: 1em;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    background-color: grey;
+    color: white;
+}
+
 /* Mobil */
 @media screen and (max-width: 990px){
     .container_console{
         display: grid;
         grid-area: 5px;
-        grid-template-areas: 
-        "hd_c hd_c"
+        grid-template-areas:
         "se_c se_c"
         "h2 h2"
         "tb tb"
         "h1 h3"
-        "cr cs"
+        "cs cr"
         "ft ft";
     }
-    .material-icons{
-        font-size: 3.5em;
+    .menu{
+        width: 50vw;
+    }
+}
+
+@media screen and (min-width: 990px){
+    .container_console{
+        display: grid;
+        grid-area: 5px;
+        grid-template-areas: 
+        "se_c se_c h2 h2"
+        "se_c se_c tb tb"
+        "se_c se_c h1 h3"
+        "se_c se_c cs cr"
+        "ft ft ft ft";
     }
     .menu{
-        height: 100vh;
-        width: 50vw;
-        background-color: grey;
-        position: fixed;
-        top: 0;
-        left: -90vw;
-        transition: left 0.3s;
-        box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
-        z-index: 10;
-    }
-        
-    .show{
-        left: 0;
-    }
-        
-    .fade-layer{
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(25, 25, 25, 0.25);
-        display: none;
-        z-index: 5;
-    }
-        
-    .visible{
-        display: block;
+        width: 40vw;
     }
 }
