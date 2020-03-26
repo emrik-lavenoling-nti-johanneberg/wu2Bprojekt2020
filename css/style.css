@@ -9,6 +9,9 @@ a{
     text-decoration: none;
     color: white;
 }
+.container{
+    width: 100vw;
+}
 /* Mobil */
 @media screen and (max-width: 990px){
     .container{
